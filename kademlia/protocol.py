@@ -1,9 +1,9 @@
-import random
-import asyncio
-from logging import getLogger
+#!/usr/bin/env python3
+#coding: utf8
 
-from rpcudp.protocol import RPCProtocol
+import logging, random, asyncio
 
+from kademlia.rpcprotocol import RPCProtocol
 from kademlia.node import Node
 from kademlia.routing import RoutingTable
 from kademlia.utils import digest
@@ -15,7 +15,7 @@ class KademliaProtocol(RPCProtocol):
         self.router = RoutingTable(self, ksize, sourceNode)
         self.storage = storage
         self.sourceNode = sourceNode
-        self.log = getLogger("kademlia-protocol")
+        self.log = logging.getLogger("kademlia.protocol.KademliaProtocol")
 
     def getRefreshIDs(self):
         """

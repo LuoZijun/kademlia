@@ -1,5 +1,12 @@
-import hashlib
-import unittest
+#!/usr/bin/env python3
+#coding: utf8
+
+import os, sys
+
+sys.path.insert(0, os.path.split(os.path.dirname(os.path.abspath(__file__)))[0])
+
+
+import hashlib, unittest
 
 from kademlia.utils import digest, sharedPrefix, OrderedSet
 

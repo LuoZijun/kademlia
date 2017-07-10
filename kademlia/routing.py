@@ -1,9 +1,10 @@
-import heapq
-import time
-import operator
-import asyncio
+#!/usr/bin/env python3
+#coding: utf8
+
+import time, operator, asyncio, heapq
 
 from collections import OrderedDict
+
 from kademlia.utils import OrderedSet, sharedPrefix, bytesToBitString
 
 

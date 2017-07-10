@@ -1,5 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+
 from setuptools import setup, find_packages
+
 import kademlia
 
 setup(
@@ -11,5 +13,5 @@ setup(
     license="MIT",
     url="http://github.com/bmuller/kademlia",
     packages=find_packages(),
-    install_requires=["rpcudp>=3.0.0"]
+    install_requires=["u-msgpack-python>=1.5"]
 )

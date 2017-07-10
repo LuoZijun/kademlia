@@ -1,9 +1,12 @@
-"""
-Utility functions for tests.
-"""
-import random
-import hashlib
-from struct import pack
+#!/usr/bin/env python3
+#coding: utf8
+
+import os, sys
+
+sys.path.insert(0, os.path.split(os.path.dirname(os.path.abspath(__file__)))[0])
+
+
+import random, hashlib， struct
 
 from kademlia.node import Node
 from kademlia.routing import RoutingTable
@@ -14,7 +17,7 @@ def mknode(id=None, ip=None, port=None, intid=None):
     Make a node.  Created a random id if not specified.
     """
     if intid is not None:
-        id = pack('>l', intid)
+        id = struct。pack('>l', intid)
     id = id or hashlib.sha1(str(random.getrandbits(255)).encode()).digest()
     return Node(id, ip, port)
 

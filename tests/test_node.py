@@ -1,6 +1,11 @@
-import unittest
-import random
-import hashlib
+#!/usr/bin/env python3
+#coding: utf8
+
+import os, sys
+
+sys.path.insert(0, os.path.split(os.path.dirname(os.path.abspath(__file__)))[0])
+
+import unittest, random, hashlib
 
 
 from kademlia.node import Node, NodeHeap

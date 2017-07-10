@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
+#coding: utf8
+
+import hashlib, operator, asyncio
+
 """
 General catchall for functions that don't make sense as methods.
 """
-import hashlib
-import operator
-import asyncio
-
 
 async def gather_dict(d):
     cors = list(d.values())

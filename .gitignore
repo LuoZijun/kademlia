@@ -3,6 +3,8 @@
 _trial_temp
 apidoc
 *.pyc
+*.pyo
+*__pycache__*
 build
 dist
 kademlia.egg-info

@@ -1,6 +1,9 @@
-import time
+#!/usr/bin/env python3
+#coding: utf8
+
+import time, operator
+
 from itertools import takewhile
-import operator
 from collections import OrderedDict
 
 

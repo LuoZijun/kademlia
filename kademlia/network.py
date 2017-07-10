@@ -1,10 +1,8 @@
-"""
-Package for interacting on the network at a high level.
-"""
-import random
-import pickle
-import asyncio
-from logging import getLogger
+#!/usr/bin/env python3
+#coding: utf8
+
+
+import logging, random, pickle, asyncio
 
 from kademlia.protocol import KademliaProtocol
 from kademlia.utils import digest
@@ -13,6 +11,9 @@ from kademlia.node import Node
 from kademlia.crawling import ValueSpiderCrawl
 from kademlia.crawling import NodeSpiderCrawl
 
+"""
+Package for interacting on the network at a high level.
+"""
 
 class Server(object):
     """
@@ -32,7 +33,7 @@ class Server(object):
         """
         self.ksize = ksize
         self.alpha = alpha
-        self.log = getLogger("kademlia-server")
+        self.log = logging.getLogger("kademlia.network.Server")
         self.storage = storage or ForgetfulStorage()
         self.node = Node(id or digest(random.getrandbits(255)))
         self.transport = None

@@ -1,5 +1,8 @@
-from operator import itemgetter
-import heapq
+#!/usr/bin/env python3
+#coding: utf8
+
+
+import operator, heapq
 
 
 class Node:
@@ -103,7 +106,7 @@ class NodeHeap(object):
 
     def __iter__(self):
         nodes = heapq.nsmallest(self.maxsize, self.heap)
-        return iter(map(itemgetter(1), nodes))
+        return iter(map(operator.itemgetter(1), nodes))
 
     def __contains__(self, node):
         for distance, n in self.heap:

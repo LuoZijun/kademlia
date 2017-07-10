@@ -1,5 +1,10 @@
+#!/usr/bin/env python3
+#coding: utf8
+
+import logging
+
 from collections import Counter
-from logging import getLogger
+
 
 from kademlia.node import Node, NodeHeap
 from kademlia.utils import gather_dict
@@ -26,7 +31,7 @@ class SpiderCrawl(object):
         self.node = node
         self.nearest = NodeHeap(self.node, self.ksize)
         self.lastIDsCrawled = []
-        self.log = getLogger("kademlia-spider")
+        self.log = logging.getLogger("kademlia.crawlling.SpiderCrawl")
         self.log.info("creating spider with peers: %s" % peers)
         self.nearest.push(peers)
 
