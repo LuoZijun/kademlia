@@ -25,7 +25,7 @@ def bootstrapDone(found, server):
 
 def main():
     loop = asyncio.get_event_loop()
-    loop.set_debug(True)
+    # loop.set_debug(True)
 
     server = Server()
     server.listen(8468)
@@ -47,7 +47,6 @@ if __name__ == '__main__':
         datefmt = '%Y-%m-%d %H:%M:%S',
         level   = logging.DEBUG
     )
-    
     logging.getLogger("asyncio").setLevel(logging.CRITICAL)
     
     main()

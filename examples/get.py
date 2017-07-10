@@ -15,7 +15,7 @@ logger = logging.getLogger('kademlia.examples.get')
 
 def main():
     loop = asyncio.get_event_loop()
-    loop.set_debug(True)
+    # loop.set_debug(True)
     
     server = Server()
     server.listen(8469)
@@ -30,9 +30,10 @@ if __name__ == '__main__':
     logging.basicConfig(
         format  = '%(asctime)s %(levelname)-5s %(threadName)-10s %(name)-15s %(message)s',
         datefmt = '%Y-%m-%d %H:%M:%S',
-        level   = logging.DEBUG
+        level   = logging.INFO
     )
-    
+    logging.getLogger("asyncio").setLevel(logging.CRITICAL)
+
     if len(sys.argv) != 2:
         logger.error("Usage: python get.py <key>")
         sys.exit(1)

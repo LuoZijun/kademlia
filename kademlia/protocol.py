@@ -37,7 +37,7 @@ class KademliaProtocol(RPCProtocol):
     def rpc_store(self, sender, nodeid, key, value):
         source = Node(nodeid, sender[0], sender[1])
         self.welcomeIfNewNode(source)
-        self.log.debug("got a store request from %s, storing value" % str(sender))
+        self.log.debug("got a store request from %s, storing value", str(sender))
         self.storage[key] = value
         return True
 
@@ -93,7 +93,7 @@ class KademliaProtocol(RPCProtocol):
         if not self.router.isNewNode(node):
             return
 
-        self.log.info("never seen %s before, adding to router and setting nearby " % node)
+        self.log.info("never seen %s before, adding to router and setting nearby ", node)
         for key, value in self.storage.items():
             keynode = Node(digest(key))
             neighbors = self.router.findNeighbors(keynode)
@@ -114,6 +114,6 @@ class KademliaProtocol(RPCProtocol):
             self.router.removeContact(node)
             return result
         
-        self.log.info("got successful response from %s")
+        self.log.info("got successful response from %s", node)
         self.welcomeIfNewNode(node)
         return result
