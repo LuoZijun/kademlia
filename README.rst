@@ -29,6 +29,9 @@ Kademlia 的 Python3 实现
     brew install python3
     brew upgrade python3
     
+    git clone https://github.com/LuoZijun/kademlia.git
+    git checkout python3.5
+    
     pip3 install -r requirements.txt
     
     python3 examples/example.py
