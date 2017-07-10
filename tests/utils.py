@@ -17,7 +17,7 @@ def mknode(id=None, ip=None, port=None, intid=None):
     Make a node.  Created a random id if not specified.
     """
     if intid is not None:
-        id = struct。pack('>l', intid)
+        id = struct.pack('>l', intid)
     id = id or hashlib.sha1(str(random.getrandbits(255)).encode()).digest()
     return Node(id, ip, port)
 
