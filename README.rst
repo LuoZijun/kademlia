@@ -43,6 +43,9 @@ Kademlia 的 Python3 实现
 --------
 
 *   `Kademlia distributed hash table <http://en.wikipedia.org/wiki/Kademlia>`_
-*   `kademlia <https://github.com/bmuller/kademlia>`_
-*   `rpcudp  <https://github.com/bmuller/rpcudp>`_
+*   `python kademlia <https://github.com/bmuller/kademlia>`_
+*   `python rpcudp  <https://github.com/bmuller/rpcudp>`_
+
+*   `Tapestry(DHT) <https://en.wikipedia.org/wiki/Tapestry_(DHT)>`_ , `SourceCode Chimera <http://current.cs.ucsb.edu/projects/chimera/>`_
+
 

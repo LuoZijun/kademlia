@@ -38,15 +38,16 @@ def main():
         for y in x:
             distance(y[0], y[1])
     address = (
-        "104.199.147.181",  # Google Cloud (Japan,  Tokyo)
+        # "104.199.147.181",  # Google Cloud (Japan,  Tokyo)
+        "203.209.152.98",   # DMM.com (Japan, ...)
         "157.240.15.35",    # Facebook (USA, Menlo Park)
         "115.239.210.27"    # Baidu (China, )
     )
 
     print("@ Google Cloud (Japan, Tokyo) -> Baidu (China, ...)")
-    distance("104.199.147.181", "115.239.210.27")
+    distance("203.209.152.98", "115.239.210.27")
     print("@ Google Cloud (Japan, Tokyo) -> Facebook (USA, Menlo Park)")
-    distance("104.199.147.181", "157.240.15.35")
+    distance("203.209.152.98", "157.240.15.35")
 
 if __name__ == '__main__':
     main()
